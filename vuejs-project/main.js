@@ -1,19 +1,24 @@
-new Vue({
-    el: '#editable',
-    data: {
+Vue
+  .createApp({
+    data() {
+      return {
         text1: 'Edit me!'
+      }
     }
-})
+  })
+  .mount('#editable')
 
-new Vue({
-    el: '#reverse',
-    data: {
+Vue
+  .createApp({
+    data() {
+      return {
         text2: 'Tech.io Vue.js Template'
+      }
     },
     methods: {
-        reverseMessage: function () {
-            this.text2 = this.text2.split('').reverse().join('')
-        }
+      reverseMessage: function () {
+        this.text2 = this.text2.split('').reverse().join('')
+      }
     }
-})
-
+  })
+  .mount('#reverse')
